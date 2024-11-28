@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Corrected the key in the data dictionary
+data = {"Date": ['2024-11-28', '2024-11-29', '2024-11-26'],
+        "sales": [100, 200, 250]}  # Changed "100" to 100
+
+df = pd.DataFrame(data)
+print(df)
+df['Date'] = pd.to_datetime(df['Date'])
+mean_sales = df['sales'].mean()
+print(mean_sales)
+print(df.info())
+print(df.describe())
